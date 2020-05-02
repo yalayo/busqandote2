@@ -7,18 +7,18 @@
 
 (def app (App))
 
-(def stack (Stack app "x-web-client"))
+(def stack (Stack app "busqndote-landing-page"))
 
 (def bucket
   (Bucket stack
-          "x-web-bucket"
+          "busqndote-landin-page-bucket"
           {:publicReadAccess true
            :websiteIndexDocument "index.html"
            }))
 
 (def deployment
   (BucketDeployment stack
-                    "x-deployment"
+                    "busqndote-landin-page-deployment"
                     {:sources [(Source/asset "dist/")]
                      :destinationBucket bucket
                      }))
