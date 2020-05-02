@@ -13,7 +13,7 @@
 
 (defn main-component []
   [:div
-   [:h1 (:text @app-state)]])
+   [:h1 "Busqandote"]])
 
 (defn mount [el]
   (rdom/render [main-component] el))
