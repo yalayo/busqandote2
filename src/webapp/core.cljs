@@ -3,7 +3,8 @@
    [goog.dom :as gdom]
    [reagent.core :as reagent :refer [atom]]
    [reagent.dom :as rdom]
-   [district0x.re-frame.google-analytics-fx]))
+   [district0x.re-frame.google-analytics-fx]
+   [views.landing.shell :refer [shell-component]]))
 
 ;; define your app data so that it doesn't get over-written on reload
 (defonce app-state (atom {:text "Let's do this!"}))
@@ -12,8 +13,7 @@
   (gdom/getElement "app"))
 
 (defn main-component []
-  [:div
-   [:h1 "Busqandote"]])
+  [shell-component])
 
 (defn mount [el]
   (rdom/render [main-component] el))
