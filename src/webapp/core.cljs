@@ -35,4 +35,6 @@
   )
 
 ;; To Disable GA while developing:
-(district0x.re-frame.google-analytics-fx/set-enabled! (not goog.DEBUG))
+;;(district0x.re-frame.google-analytics-fx/set-enabled! (not goog.DEBUG))
+
+(district0x.re-frame.google-analytics-fx/set-enabled! true)
