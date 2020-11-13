@@ -16,7 +16,7 @@ resource "aws_s3_bucket" "b" {
           "arn:aws:s3:::busqandote.com/*"
         ]
       }
-    ],
+    ]
   }
   POLICY
 
