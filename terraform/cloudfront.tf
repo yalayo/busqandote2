@@ -85,6 +85,10 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
   price_class = "PriceClass_200"
 
+  restrictions {
+    restriction_type = "none"
+  }
+
   viewer_certificate {
     acm_certificate_arn = data.aws_acm_certificate.c.arn
   }
